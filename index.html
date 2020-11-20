@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form save</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script src="app.js" defer></script>
+    <script type= "text/javascript" src = "countries.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="registration">
+        <h2>Registration</h2>
+      </div>
+      <form class="form">
+        <div class="form-controls">
+          <div class="form-control">
+            <label for="first-name">First Name : </label>
+            <input type="text" id="first-name" />
+          </div>
+
+          <div class="form-control">
+            <label for="last-name"> Last Name : </label>
+            <input type="text" id="last-name" />
+          </div>
+
+          <div class="form-control">
+            <label for="email"> Email : </label>
+            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" />
+          </div>
+
+          <div class="form-control">
+            <label for="dob"> DOB :</label>
+            <input type="date" id="dob" />
+          </div>    
+
+          <div class="form-control" id="phone-container">
+            <label for="phone" >Phone : </label>
+            <input type="tel" id="phone" pattern="[0-9]{10}" maxlength=10 />
+
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-plus"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              id="plus-button"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="form-controls">
+          <div class="form-control">
+            <label for="address"> Address : </label>
+            <textarea id="address"></textarea>
+          </div>
+
+
+          <div class="form-control">
+            <label for="country"> Country : </label>
+            <!-- <input type="text" id="country" /> -->
+            <!-- <select id="country" name="country"></select> -->
+            <select id="country" name ="country"></select> 
+          </div>
+          <div class="form-control">
+            <label for="state"> State : </label>
+            <!-- <select name="state" id="state"></select> -->
+            <!-- <input type="text" id="state" /> -->
+            <select name ="state" id ="state"></select>
+          </div>
+            <script language="javascript">
+              populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+            </script>
+
+          <div class="form-control">
+            <label for="zip"> Zip : </label>
+            <input type="number" id="zip" />
+          </div>
+          <div class="button-container">
+            <button id="save">SAVE</button>
+            <button id="reset">RESET</button>
+          </div>
+        </div>
+      </form>
+    
+    <section class="section">
+      <table class="table" border="1rem solid black">
+        <thead>
+          <tr>
+            <th id="table-checkbox">
+              <input type="checkbox" id = "allcheck" name="allcheck" unchecked/>
+            </th>
+            <th id="table-name">Name</th>
+            <th id="table-email">Email Address</th>
+            <th id="table-dob">Date of Birth</th>
+            <th id="table-phone">Phone(s)</th>
+            <th id="table-address">Address</th>
+            <th id="table-action">Action</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+        <button class="delete-selected">Delete Selected</button>
+      </table>
+    </section>
+  </header>
+  </body>
+</html>

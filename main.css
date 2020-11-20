@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    font-size: 85%;
+  }
+  .header {
+    height: 100vh;
+    border: .2rem solid black;
+    margin: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .form-controls {
+    height: 20rem;
+    /* border: 1rem solid red; */
+    width: 47%;
+    padding: 2rem;
+    height: 20rem;
+  }
+  .form-control {
+    display: inline-block;
+    border: none;
+    
+  }
+  .form-control label {
+    width: 34%;
+  }
+  #plus-button {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .phone-block {
+    display: inline-block;
+    margin: 1% 0 0 35%;
+  }
+  .button-container button {
+    margin:10% 0 0 10%;
+    display: inline-block;
+    width: 20%;
+    
+  }
+  .button-container {
+    text-align: center;
+  }
+  section table {
+    margin: 5% 0 0 0;
+  }
+  .section {
+    position: relative;
+    margin:.1rem .1rem .1rem .1rem;
+  }
+  .delete-selected {
+    position: absolute;
+    right: 3rem;
+    top: -40px;
+  }
+
+  .form-control textarea{
+      width:18rem;
+  }
+#dob{
+    width:18rem;
+} 
+#allcheck{
+  margin:10% 0 0 0;
+}
+
+#country{
+  width:34%;
+}
+#state{
+  width:34%;
+}
+
+#address{
+  width:34%;
+}
+#zip{
+  width:34%;
+}
+#dob{
+  width:32%;
+}
